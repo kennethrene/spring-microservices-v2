@@ -42,6 +42,7 @@
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!-- Framework to assign unique id between microservices -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
@@ -52,6 +53,8 @@
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
 
+		<!-- Framework for messaging solutions - JMS - Creates a queue to avoid loosing info when
+		the zipkin server is down -->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
