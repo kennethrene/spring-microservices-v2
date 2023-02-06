@@ -23,6 +23,8 @@ public class ApiGatewayConfiguration {
 						.uri("lb://currency-conversion"))
 				.route(p -> p.path("/currency-conversion-feign/**")
 						.uri("lb://currency-conversion"))
+				.route(p -> p.path("/currency-conversion-webclient-balanced/**")
+						.uri("lb://currency-conversion"))
 				.route(p -> p.path("/currency-conversion-new/**")
 						.filters(f -> f.rewritePath(
 								"/currency-conversion-new/(?<segment>.*)", 

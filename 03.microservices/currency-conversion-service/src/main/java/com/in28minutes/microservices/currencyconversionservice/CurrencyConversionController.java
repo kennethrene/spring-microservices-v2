@@ -85,7 +85,7 @@ public class CurrencyConversionController {
 	) {
 		CurrencyConversion currencyConversion = webClientBuilder
 				.baseUrl("http://currency-exchange").build().get()
-				.uri((UriBuilder builder) -> builder.path("/currency-exchange/from/{from}/to/{to}")
+				.uri((UriBuilder builder) -> builder.path("currency-exchange/from/{from}/to/{to}")
 						.build(from, to))
 				.exchangeToMono(response -> {
 					if (response.statusCode().isError()) {
